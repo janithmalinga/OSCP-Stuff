@@ -1,0 +1,3 @@
+# Find all open ports
+
+nmap -sV -Pn -p- -T4 -A <IP>
