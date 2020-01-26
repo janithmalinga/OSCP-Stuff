@@ -1,7 +1,8 @@
-# Find all open ports
+Find all open ports
+#nmap -sV -Pn -p- -T4 -A <IP>
 
-nmap -sV -Pn -p- -T4 -A <IP>
+linux enumeration 
+#enum4linux <IP>
 
-# linux enumeration 
-
-enum4linux <IP>
+If port 80 is open
+#nikto -host http://<IP>
