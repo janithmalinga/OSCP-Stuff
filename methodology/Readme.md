@@ -4,6 +4,11 @@
 ```
 nmap -sV -Pn -p- -T4 -A <IP>
 ```
+### Password bruteforce using hydra
+```
+hydra -L user.txt -P pass.txt ssh://10.10.10.1 -t 4
+```
+
 ### linux enumeration 
 ```
 enum4linux <IP>
