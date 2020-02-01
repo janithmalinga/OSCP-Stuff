@@ -6,6 +6,7 @@ nmap -sV -Pn -p- -T4 -A <IP>
 ```
 ### Password bruteforce using hydra
 ```
+hydra -l bob -p password ssh://10.10.10.1 -t 4
 hydra -L user.txt -P pass.txt ssh://10.10.10.1 -t 4
 ```
 
@@ -23,4 +24,18 @@ nikto -host http://<IP>
 ### Online md5 cracker
 ```
 https://www.md5online.org/md5-decrypt.html
+```
+
+## PRIVILAGE ESCALATION
+
+### Linux
+
+### First do some privilage checking
+```
+http://www.securitysift.com/download/linuxprivchecker.py
+```
+
+### if you can edit sudoers file, just add this line
+```
+echo 'bob ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 ```
