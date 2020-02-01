@@ -20,6 +20,11 @@ enum4linux <IP>
 ```
 nikto -host http://<IP>
 ```
+### sqlmap with request file
+```
+sqlmap -r search-test.txt -p param
+```
+
 ## ENCRYPTIONS AND DECRYPTIONS
 
 ### Online md5 cracker
