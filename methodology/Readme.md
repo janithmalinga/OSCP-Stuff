@@ -5,6 +5,13 @@
 nmap -sV -Pn -p- -T4 -A <IP>
 nmap -Pn -sT -sV -A --script=default,banner -p- <IP>
 ```
+### Vulnerability Scan
+#### eternalblue scan
+```
+nmap -p445 --script smb-vuln-ms17-010 <IP-range>
+```
+
+
 ### Password bruteforce using hydra
 ```
 hydra -l bob -p password ssh://10.10.10.1 -t 4
