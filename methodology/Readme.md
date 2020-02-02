@@ -4,6 +4,7 @@
 ```
 nmap -sV -Pn -p- -T4 -A <IP>
 nmap -Pn -sT -sV -A --script=default,banner -p- <IP>
+nmap -n -A -sU -T4 <IP>
 ```
 ### Vulnerability Scan
 #### eternalblue scan
