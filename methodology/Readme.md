@@ -43,6 +43,11 @@ https://www.md5online.org/md5-decrypt.html
 
 ### Linux
 
+### upgraded it to a pseudo-terminal using python
+```
+python -c 'import pty; pty.spawn("/bin/bash")'
+```
+
 ### First do some privilage checking
 ```
 http://www.securitysift.com/download/linuxprivchecker.py
