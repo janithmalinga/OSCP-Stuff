@@ -12,3 +12,8 @@ https://medium.com/@drag0n/sqlmap-tamper-scripts-sql-injection-and-waf-bypass-c5
 https://raw.githubusercontent.com/worawit
 https://github.com/worawit/MS17-010/blob/master/zzz_exploit.py
 ```
+
+### GTFOBins
+```
+https://gtfobins.github.io/
+```
