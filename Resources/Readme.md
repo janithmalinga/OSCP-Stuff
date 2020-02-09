@@ -1,4 +1,4 @@
-### Everything is listed here
+### OSCP Guides
 ```
 https://xapax.gitbooks.io/security/content/
 https://github.com/xxooxxooxx/xxooxxooxx.github.io/wiki/OSCP-Survival-Guide
