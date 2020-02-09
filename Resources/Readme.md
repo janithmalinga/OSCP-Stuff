@@ -1,6 +1,7 @@
 ### Everything is listed here
 ```
 https://xapax.gitbooks.io/security/content/
+https://github.com/xxooxxooxx/xxooxxooxx.github.io/wiki/OSCP-Survival-Guide
 ```
 ### SQlmap tamper scripts
 ```
