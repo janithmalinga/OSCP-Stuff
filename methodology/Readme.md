@@ -37,6 +37,11 @@ cad> PUT met.asp met.asp
 
 ## ENCRYPTIONS AND DECRYPTIONS
 
+### Detect the hash type
+```
+hash-identifier
+```
+
 ### Password bruteforce using hydra
 ```
 hydra -l bob -p password ssh://10.10.10.1 -t 4
