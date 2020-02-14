@@ -71,4 +71,12 @@ echo 'bob ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 ```
 
 ## WINDOWS PRIVILAGE ESCALATION
+### Dirty COW Vulnerability
+```
+https://www.exploit-db.com/exploits/40839
+```
 
+## Windows port forwarding
+```
+netsh interface portproxy add v4tov4 listenaddress=localaddress listenport=localport connectaddress=destaddress connectport=destport
+```
