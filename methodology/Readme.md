@@ -75,6 +75,11 @@ echo 'bob ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 ```
 
 ## WINDOWS PRIVILAGE ESCALATION
+### Windows ile search
+```
+where /r c:\ proof.txt
+```
+
 ### Dirty COW Vulnerability
 ```
 https://www.exploit-db.com/exploits/40839
