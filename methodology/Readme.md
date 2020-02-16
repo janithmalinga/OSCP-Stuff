@@ -54,6 +54,10 @@ https://www.md5online.org/md5-decrypt.html
 ```
 
 ## LINUX PRIVILAGE ESCALATION
+### Shell upgrade
+```
+echo os.system('/bin/bash')
+```
 
 ### upgraded it to a pseudo-terminal using python
 ```
