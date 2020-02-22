@@ -46,6 +46,7 @@ hash-identifier
 ```
 hydra -l bob -p password ssh://10.10.10.1 -t 4
 hydra -L user.txt -P pass.txt ssh://10.10.10.1 -t 4
+hydra -s <port> -L user.txt -P pass.txt ssh://10.10.10.1 -t 4
 ```
 
 ### Online md5 cracker
