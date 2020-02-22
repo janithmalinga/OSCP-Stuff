@@ -85,7 +85,14 @@ where /r c:\ proof.txt
 https://www.exploit-db.com/exploits/40839
 ```
 
+## PORT FORWARDING
+
 ## Windows port forwarding
 ```
 netsh interface portproxy add v4tov4 listenaddress=localaddress listenport=localport connectaddress=destaddress connectport=destport
+```
+## Linux port forwarding
+```
+ssh -p 9002 -L10000:127.0.0.1:10000 user@<IP2>
+ssh -p 9002 -L10000:<IP1>:22 user@<IP2>
 ```
