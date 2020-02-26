@@ -76,7 +76,7 @@ echo 'bob ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 ```
 
 ## WINDOWS PRIVILAGE ESCALATION
-### Windows ile search
+### Windows File search
 ```
 where /r c:\ proof.txt
 ```
@@ -84,6 +84,13 @@ where /r c:\ proof.txt
 ### Dirty COW Vulnerability
 ```
 https://www.exploit-db.com/exploits/40839
+```
+### 'afd.sys' Local Privilege Escalation
+
+#### Windows Xp service pack 3 and Windows 2000 service pack 2 is vulnerable to this.
+```
+exploit url: https://raw.githubusercontent.com/abatchy17/WindowsExploits/master/MS11-080%20-%20AFD.sys/MS11-080.py
+video: https://www.youtube.com/watch?v=rxNziQlk7sA
 ```
 
 ## PORT FORWARDING
