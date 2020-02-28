@@ -14,7 +14,12 @@ nmap -p445 --script smb-vuln-ms17-010 <IP-range>
 
 ### linux enumeration 
 ```
-enum4linux <IP>
+enum4linux -a <IP>
+```
+
+## Samba shared folder access
+```
+smbclient \\\\10.10.10.10\\folder
 ```
 
 ## WEB PENTEST
@@ -55,6 +60,12 @@ https://www.md5online.org/md5-decrypt.html
 ```
 
 ## LINUX PRIVILAGE ESCALATION
+
+## Check editable crontabs
+```
+cat /etc/crontab
+```
+
 ### Shell upgrade
 ```
 echo os.system('/bin/bash')
