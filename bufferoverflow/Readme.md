@@ -51,7 +51,7 @@ retn
 
 ## Find opcode of given instruction
 ```
-nasm_shell.rb
+/usr/share/metasploit-framework/tools/exploit/nasm_shell.rb
 nasm> jmp esp
 ```
 ## search instructions using mona
