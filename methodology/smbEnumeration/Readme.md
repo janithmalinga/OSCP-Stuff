@@ -1,6 +1,6 @@
 
 ## smb linux enumeration
-````
+```
 enum4linux -a 10.11.1.227
 ```
 
