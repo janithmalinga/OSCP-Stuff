@@ -8,9 +8,15 @@ nmap -v -p 139,445 --script=smb-vuln-ms08-067 --script-args=unsafe=1 10.11.1.201
 enum4linux -a 10.11.1.227
 ```
 
+## nmblookup
+```
+nmblookup -A 10.10.10.10
+```
+
 ## connect to smb share folder
 ```
-smbclient \\\\10.11.1.22\home
+smbclient \\\\10.10.10.10\home
+smbclient //home/wwwroot -I 10.10.10.10 -N
 ```
 ## smb commands
 ```
