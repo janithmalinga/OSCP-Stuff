@@ -56,7 +56,7 @@ https://github.com/FireFart/dirtycow/blob/master/dirty.c
 
 ## SUID checker
 ```
-find / \( -perm -4000 \) -exec ls -ld {} \; 2>/dev/null | awk '{print $9}'
+find / \( -perm -4000 \) -exec ls -ld {} \; 2>/dev/null
 ```
 
 ## If it is possible to run a c executable, run useradd.c file
