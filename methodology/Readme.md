@@ -54,6 +54,13 @@ hydra -L user.txt -P pass.txt ssh://10.10.10.1 -t 4
 hydra -s <port> -L user.txt -P pass.txt ssh://10.10.10.1 -t 4
 ```
 
+### samdump2
+```
+samdump2 SYSTEM SAM -o passwords.key
+cat passwords.key | cut -d ":" -f4 >> hashvalue
+hashcat -a 0 -m 1000 hashvalue rockyou.txt --force
+```
+
 ### Online md5 cracker
 ```
 https://www.md5online.org/md5-decrypt.html
