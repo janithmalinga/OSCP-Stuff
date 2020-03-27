@@ -91,3 +91,9 @@ int main ()
   return 0;
 }
 ```
+# WINDOWS
+
+## SAM file path
+```
+C:\Windows\System32\Config
+```
