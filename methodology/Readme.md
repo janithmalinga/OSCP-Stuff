@@ -99,6 +99,11 @@ echo 'bob ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 where /r c:\ proof.txt
 ```
 
+### binary path add
+```
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ucb/
+```
+
 ### Dirty COW Vulnerability
 ```
 https://www.exploit-db.com/exploits/40839
