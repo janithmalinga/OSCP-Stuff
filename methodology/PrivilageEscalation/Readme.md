@@ -54,6 +54,10 @@ https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.
 crontab -l
 ```
 
+## Application based cron jobs
+```
+ls -all /etc/cron.d
+```
 
 ## Writable /etc/passwd file found
 ```
