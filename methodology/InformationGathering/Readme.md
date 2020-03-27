@@ -10,7 +10,7 @@ nmap --top-ports 10 --open <IP>
 nmap -Pn -p- -sV --reason <IP>
 ```
 
-### Full udp port scan
+### Top 100 udp port scan
 ```
-nmap -n -A -sU -T4 <IP>
+nmap -n -A -sU -T4 --top-ports 100 <IP>
 ```
