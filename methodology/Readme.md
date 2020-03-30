@@ -6,6 +6,20 @@ nmap -sV -Pn -p- -T4 -A <IP>
 nmap -Pn -sT -sV -A --script=default,banner -p- <IP>
 nmap -n -A -sU -T4 <IP>
 ```
+### SSH scan
+```
+nmap -sV -Pn -p 22 --script=ssh-auth-methods,ssh-hostkey,ssh-run,sshv1 <IP>
+```
+### SMB Scan
+```
+nmap --script=smb-enum-shares,smb-ls,smb-enum-users,smb-mbenum,smb-os-discovery,smbsecurity-mode,smb-vuln-cve2009-3103,smb-vuln-ms06-025,smb-vuln-ms07-029,smb-vuln-ms08-067,smb-vuln-ms10-054,smb-vuln-ms10-061,smb-vuln-regsvc-dos <IP>
+```
+
+### FTP scan
+```
+nmap -sV -Pn -p 21 --script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpdbackdoor,ftp-vuln-cve2010-4221 <IP>
+```
+
 ### Vulnerability Scan
 #### eternalblue scan
 ```
