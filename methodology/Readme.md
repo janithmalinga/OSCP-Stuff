@@ -10,6 +10,20 @@ nmap -n -A -sU -T4 <IP>
 ```
 nmap -sV -Pn -p 22 --script=ssh-auth-methods,ssh-hostkey,ssh-run,sshv1 <IP>
 ```
+
+### DNS information gathering
+if port 53 is open run NSLOOKUP
+```
+nslookup
+  server <IP>
+  <IP>
+```
+zone transfer
+```
+host -l domain.com <IP>
+```
+
+
 ### SMB Scan
 ```
 nmap --script=smb-enum-shares,smb-ls,smb-enum-users,smb-mbenum,smb-os-discovery,smbsecurity-mode,smb-vuln-cve2009-3103,smb-vuln-ms06-025,smb-vuln-ms07-029,smb-vuln-ms08-067,smb-vuln-ms10-054,smb-vuln-ms10-061,smb-vuln-regsvc-dos <IP>
