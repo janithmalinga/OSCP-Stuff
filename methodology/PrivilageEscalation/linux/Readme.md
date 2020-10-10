@@ -1,35 +1,54 @@
-## Do this first
+## Good Reads
 ```
 https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+https://github.com/janithmalinga/PayloadsAllTheThings
+https://book.hacktricks.xyz/linux-unix/privilege-escalation
 ```
+## Manual Enumeration
 
-## Find OS version
-```
-cat /etc/*-release
-uname -i
-lsb_release -a
-```
-## Logged in user
+## Enumerate User Info
+
+### Logged in user
 ```
 id
 whoami
 pwd
 ```
-## Other users
+
+### Find OS version
+```
+cat /etc/*-release
+uname -a
+lsb_release -a
+```
+
+### Other users
 ```
 cat /etc/passwd
 grep -vE "nologin|false" /etc/passwd
 ```
-## curently running processes
+### curently running processes
 ```
 ps aux
-netstat -antup
 ```
-## What's installed
+### What's installed
 ```
 dpkg -l (Debian based OSs)
 rpm -qa (CentOS / openSUSE )
 uname -a
+```
+
+## Enumerate Network
+
+### Find IP and associated IPs
+```
+ifconfig
+ip a
+```
+
+### Open Ports
+```
+netstat -ano
 ```
 
 ## In privilage escalation we need to find answers first to below questions
@@ -42,8 +61,9 @@ What's scheduled to run?
 Any hardcoded credentials? Where are credentials kept?
 ```
 
-## use a script to find the answers
+## Automated Enumeration
 ```
+https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/blob/master/linPEAS/linpeas.sh
 https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py
 ```
 
