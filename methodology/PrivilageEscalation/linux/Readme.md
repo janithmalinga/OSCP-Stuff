@@ -67,9 +67,12 @@ https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/blob/m
 https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py
 ```
 
+## Exploiting scheduled tasks
+
 ### User editable cronjobs
 ```
 crontab -l
+cat /etc/crontab
 ```
 
 ### Application based cron jobs
